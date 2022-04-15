@@ -22,12 +22,12 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTL  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | CTL/'|
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//                    | GUI | LWR | ENT |   | SPC | TAB  | ALT |
+//                    | GUI | LWR | ENT |   | SPC | CAPS | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                  &kp LGUI &mo 1 &kp RET        &kp SPACE &kp TAB &kp RALT
+                  &kp LGUI &mo 1 &kp RET        &kp SPACE &kp CAPS &kp RALT
                         >;
                 };
                 lower_layer {
@@ -47,12 +47,12 @@
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
 // | MUTE |VOLDN|VOLUP| PREV| NEXT| PLAY|   | BT1 | BT2 | BT3 | BT4 | BT5 | BTCLR|
-// | CAPS |     |     |     |     |     |   | BT  | USB |     |     |     |      |
+// |      |     |     |     |     |     |   | BT  | USB |     |     |     |      |
 // | SHFT |     |     |     | BRID| BRIU|   |     |     |     |     |     | PAUSE|
 //                    | GUI |     | ENT |   | SPC |     | ALT |
                         bindings = <
    &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT &kp C_PP   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &kp CAPS &trans &trans &trans &trans &trans                           &out OUT_BLE &out OUT_USB &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans                             &out OUT_BLE &out OUT_USB &trans &trans &trans &trans
    &kp LSHIFT &trans &trans &trans &kp C_BRI_DN  &kp C_BRI_UP            &trans &trans &trans &trans &trans &kp PAUSE_BREAK
                                         &trans &trans &trans             &trans &trans &trans
                         >;
