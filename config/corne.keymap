@@ -177,7 +177,7 @@
   &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P  &kp LBKT
  &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                        &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT  &sk RSHIFT
+                            &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT  &sk RSHIFT
             >;
         };
 
@@ -191,10 +191,10 @@
         };
         i3_layer {
             bindings = <
-&trans  &trans  &trans     &mc_i3up    &trans      &trans       &trans  &mc_i3ws7  &mc_i3ws8  &mc_i3ws9  &trans  &trans
-&trans  &trans  &mc_i3left &mc_i3down  &mc_i3right &trans       &trans  &mc_i3ws4  &mc_i3ws5  &mc_i3ws6  &trans  &trans
-&trans  &trans  &trans     &trans      &trans      &trans       &trans  &mc_i3ws1  &mc_i3ws2  &mc_i3ws3  &trans  &trans
-                             &trans    &trans   &mc_i3ws0       &none        &trans        &none
+&none      &none  &none      &mc_i3up    &none       &none       &none  &mc_i3ws7  &mc_i3ws8  &mc_i3ws9  &none  &none
+&none      &none  &mc_i3left &mc_i3down  &mc_i3right &none       &none  &mc_i3ws4  &mc_i3ws5  &mc_i3ws6  &none  &none
+&sk LSHFT  &none  &none      &none       &none       &none       &none  &mc_i3ws1  &mc_i3ws2  &mc_i3ws3  &none  &none
+                               &none  &sk LCTRL  &mc_i3ws0       &none    &trans     &sk RSHFT
             >;
         };
     };
