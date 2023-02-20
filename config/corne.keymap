@@ -28,7 +28,7 @@
         };
     };
     macros {
-        mcro_i3ws0: macro_i3_workspace_0 {
+        mc_i3ws0: macro_i3_workspace_0 {
             label = "ZM_macro_i3_workspace_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -38,7 +38,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws1: macro_i3_workspace_1 {
+        mc_i3ws1: macro_i3_workspace_1 {
             label = "ZM_macro_i3_workspace_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -48,7 +48,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws2: macro_i3_workspace_2 {
+        mc_i3ws2: macro_i3_workspace_2 {
             label = "ZM_macro_i3_workspace_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -58,7 +58,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws3: macro_i3_workspace_3 {
+        mc_i3ws3: macro_i3_workspace_3 {
             label = "ZM_macro_i3_workspace_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -68,7 +68,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws4: macro_i3_workspace_4 {
+        mc_i3ws4: macro_i3_workspace_4 {
             label = "ZM_macro_i3_workspace_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -78,7 +78,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws5: macro_i3_workspace_5 {
+        mc_i3ws5: macro_i3_workspace_5 {
             label = "ZM_macro_i3_workspace_5";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -88,7 +88,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws6: macro_i3_workspace_6 {
+        mc_i3ws6: macro_i3_workspace_6 {
             label = "ZM_macro_i3_workspace_6";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -98,7 +98,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws7: macro_i3_workspace_7 {
+        mc_i3ws7: macro_i3_workspace_7 {
             label = "ZM_macro_i3_workspace_7";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -108,7 +108,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws8: macro_i3_workspace_8 {
+        mc_i3ws8: macro_i3_workspace_8 {
             label = "ZM_macro_i3_workspace_8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -118,7 +118,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws9: macro_i3_workspace_9 {
+        mc_i3ws9: macro_i3_workspace_9 {
             label = "ZM_macro_i3_workspace_9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -128,7 +128,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3up: macro_i3_up {
+        mc_i3up: macro_i3_up {
             label = "ZM_macro_i3_up";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -138,7 +138,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3down: macro_i3_down {
+        mc_i3down: macro_i3_down {
             label = "ZM_macro_i3_down";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -148,7 +148,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3left: macro_i3_left {
+        mc_i3left: macro_i3_left {
             label = "ZM_macro_i3_left";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -158,7 +158,7 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3right: macro_i3_right {
+        mc_i3right: macro_i3_right {
             label = "ZM_macro_i3_right";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -191,10 +191,10 @@
         };
         i3_layer {
             bindings = <
-&trans  &trans  &trans       &mcro_i3up    &trans        &trans       &trans  &mcro_i3ws7  &mcro_i3ws8  &mcro_i3ws9  &trans  &trans
-&trans  &trans  &mcro_i3left &mcro_i3down  &mcro_i3right &trans       &trans  &mcro_i3ws4  &mcro_i3ws5  &mcro_i3ws6  &trans  &trans
-&trans  &trans  &trans       &trans        &trans        &trans       &trans  &mcro_i3ws1  &mcro_i3ws2  &mcro_i3ws3  &trans  &trans
-                     &trans    &trans   &mcro_i3ws0      &none        &trans        &none
+&trans  &trans  &trans     &mc_i3up    &trans      &trans       &trans  &mc_i3ws7  &mc_i3ws8  &mc_i3ws9  &trans  &trans
+&trans  &trans  &mc_i3left &mc_i3down  &mc_i3right &trans       &trans  &mc_i3ws4  &mc_i3ws5  &mc_i3ws6  &trans  &trans
+&trans  &trans  &trans     &trans      &trans      &trans       &trans  &mc_i3ws1  &mc_i3ws2  &mc_i3ws3  &trans  &trans
+                             &trans    &trans   &mc_i3ws0       &none        &trans        &none
             >;
         };
     };
