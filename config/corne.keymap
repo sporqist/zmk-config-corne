@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&sl 2>;
         };
     };
@@ -134,7 +134,7 @@
 
         default_layer {
             bindings = <
-  &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P    &kp LBKT
+  &kp ESC  &i3_ws_1  &i3_ws_1     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P    &kp LBKT
  &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI     &kp SQT
 &sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &sk RSHIFT
                   &td_i3_workspace &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
@@ -154,7 +154,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_7  &i3_ws_8  &i3_ws_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_4  &i3_ws_5  &i3_ws_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_1  &i3_ws_2  &i3_ws_3  &trans  &trans
-                    &trans    &trans    &i3_ws_0          &none        &trans        &none
+                    &trans    &kp 2    &i3_ws_0          &none        &trans        &none
             >;
         };
     };
