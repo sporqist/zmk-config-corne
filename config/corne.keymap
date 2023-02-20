@@ -21,15 +21,15 @@
     behaviors {
         td_i3: tap_dance_i3_workspace {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_I3_WORKSPACE";
+            label = "ZM_tapdance_i3";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp LGUI>, <&sl 2>;
         };
     };
     macros {
-        mcro_i3ws0: mcro_i3ws0 {
-            label = "ZM_mcro_i3ws0";
+        mcro_i3ws0: macro_i3_workspace_0 {
+            label = "ZM_macro_i3_workspace_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -38,8 +38,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws1: mcro_i3ws1 {
-            label = "ZM_mcro_i3ws1";
+        mcro_i3ws1: macro_i3_workspace_1 {
+            label = "ZM_macro_i3_workspace_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -48,8 +48,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws2: mcro_i3ws2 {
-            label = "ZM_mcro_i3ws2";
+        mcro_i3ws2: macro_i3_workspace_2 {
+            label = "ZM_macro_i3_workspace_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -58,8 +58,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws3: mcro_i3ws3 {
-            label = "ZM_mcro_i3ws3";
+        mcro_i3ws3: macro_i3_workspace_3 {
+            label = "ZM_macro_i3_workspace_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -68,8 +68,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws4: mcro_i3ws4 {
-            label = "ZM_mcro_i3ws4";
+        mcro_i3ws4: macro_i3_workspace_4 {
+            label = "ZM_macro_i3_workspace_4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -78,8 +78,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws5: mcro_i3ws5 {
-            label = "ZM_mcro_i3ws5";
+        mcro_i3ws5: macro_i3_workspace_5 {
+            label = "ZM_macro_i3_workspace_5";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -88,8 +88,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws6: mcro_i3ws6 {
-            label = "ZM_mcro_i3ws6";
+        mcro_i3ws6: macro_i3_workspace_6 {
+            label = "ZM_macro_i3_workspace_6";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -98,8 +98,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws7: mcro_i3ws7 {
-            label = "ZM_mcro_i3ws7";
+        mcro_i3ws7: macro_i3_workspace_7 {
+            label = "ZM_macro_i3_workspace_7";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -108,8 +108,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws8: mcro_i3ws8 {
-            label = "ZM_mcro_i3ws8";
+        mcro_i3ws8: macro_i3_workspace_8 {
+            label = "ZM_macro_i3_workspace_8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -118,8 +118,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        mcro_i3ws9: mcro_i3ws9 {
-            label = "ZM_mcro_i3ws9";
+        mcro_i3ws9: macro_i3_workspace_9 {
+            label = "ZM_macro_i3_workspace_9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
