@@ -128,16 +128,56 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
+        mcro_i3up: macro_i3_up {
+            label = "ZM_macro_i3_up";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        mcro_i3down: macro_i3_down {
+            label = "ZM_macro_i3_down";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        mcro_i3left: macro_i3_left {
+            label = "ZM_macro_i3_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        mcro_i3right: macro_i3_right {
+            label = "ZM_macro_i3_right";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-  &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P    &kp LBKT
- &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI     &kp SQT
-&sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &sk RSHIFT
-                        &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
+  &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P  &kp LBKT
+ &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
+                        &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT  &sk RSHIFT
             >;
         };
 
@@ -151,10 +191,10 @@
         };
         i3_layer {
             bindings = <
-&trans  &trans  &trans   &kp UP    &trans    &trans       &trans  &mcro_i3ws7  &mcro_i3ws8  &mcro_i3ws9  &trans  &trans
-&trans  &trans  &kp LEFT &kp DOWN  &kp RIGHT &trans       &trans  &mcro_i3ws4  &mcro_i3ws5  &mcro_i3ws6  &trans  &trans
-&trans  &trans  &trans   &trans    &trans    &trans       &trans  &mcro_i3ws1  &mcro_i3ws2  &mcro_i3ws3  &trans  &trans
-                     &trans    &trans   &mcro_i3ws0       &none        &trans        &none
+&trans  &trans  &trans       &mcro_i3up    &trans        &trans       &trans  &mcro_i3ws7  &mcro_i3ws8  &mcro_i3ws9  &trans  &trans
+&trans  &trans  &mcro_i3left &mcro_i3down  &mcro_i3right &trans       &trans  &mcro_i3ws4  &mcro_i3ws5  &mcro_i3ws6  &trans  &trans
+&trans  &trans  &trans       &trans        &trans        &trans       &trans  &mcro_i3ws1  &mcro_i3ws2  &mcro_i3ws3  &trans  &trans
+                     &trans    &trans   &mcro_i3ws0      &none        &trans        &none
             >;
         };
     };
