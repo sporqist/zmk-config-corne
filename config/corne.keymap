@@ -18,6 +18,117 @@
 };
 
 / {
+    behaviors {
+        td_i3_workspace: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp LGUI>, <&sl 2>;
+        };
+    };
+    macros {
+        i3_ws_0: i3_ws_0 {
+            label = "ZM_i3_ws_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 0>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_1: i3_ws_1 {
+            label = "ZM_i3_ws_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 1>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_2: i3_ws_2 {
+            label = "ZM_i3_ws_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 2>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_3: i3_ws_3 {
+            label = "ZM_i3_ws_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 3>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_4: i3_ws_4 {
+            label = "ZM_i3_ws_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 4>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_5: i3_ws_5 {
+            label = "ZM_i3_ws_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 5>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_6: i3_ws_6 {
+            label = "ZM_i3_ws_6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 6>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_7: i3_ws_7 {
+            label = "ZM_i3_ws_7";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 7>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_8: i3_ws_8 {
+            label = "ZM_i3_ws_8";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 8>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        i3_ws_9: i3_ws_9 {
+            label = "ZM_i3_ws_9";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp 9>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,7 +137,7 @@
   &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P    &kp LBKT
  &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI     &kp SQT
 &sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &sk RSHIFT
-                         &kp LGUI  &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
+                  &td_i3_workspace &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
             >;
         };
 
@@ -35,7 +146,15 @@
 &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT  &kp C_PP       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &kp F1      &kp F2        &kp F3        &kp F4      &kp F5      &kp F6         &out OUT_BLE  &out OUT_USB  &none         &none         &none         &none
 &kp F7      &kp F8        &kp F9        &kp F10     &kp F11     &kp F12        &none         &none         &none         &none         &none         &kp PAUSE_BREAK
-                                              &trans    &trans    &none          &none        &trans        &none
+                                              &trans    &trans    &none        &none        &trans        &none
+            >;
+        };
+        i3_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_7  &i3_ws_8  &i3_ws_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_4  &i3_ws_5  &i3_ws_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &trans  &i3_ws_1  &i3_ws_2  &i3_ws_3  &trans  &trans
+                    &trans    &trans    &i3_ws_0          &none        &trans        &none
             >;
         };
     };
