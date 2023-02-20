@@ -19,7 +19,7 @@
 
 / {
     behaviors {
-        td_tdi3ws: tap_dance_i3_workspace {
+        td_i3: tap_dance_i3_workspace {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_I3_WORKSPACE";
             #binding-cells = <0>;
@@ -28,8 +28,8 @@
         };
     };
     macros {
-        tdi3ws_0: tdi3ws_0 {
-            label = "ZM_tdi3ws_0";
+        mcro_i3ws0: mcro_i3ws0 {
+            label = "ZM_mcro_i3ws0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -38,8 +38,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_1: tdi3ws_1 {
-            label = "ZM_tdi3ws_1";
+        mcro_i3ws1: mcro_i3ws1 {
+            label = "ZM_mcro_i3ws1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -48,8 +48,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_2: tdi3ws_2 {
-            label = "ZM_tdi3ws_2";
+        mcro_i3ws2: mcro_i3ws2 {
+            label = "ZM_mcro_i3ws2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -58,8 +58,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_3: tdi3ws_3 {
-            label = "ZM_tdi3ws_3";
+        mcro_i3ws3: mcro_i3ws3 {
+            label = "ZM_mcro_i3ws3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -68,8 +68,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_4: tdi3ws_4 {
-            label = "ZM_tdi3ws_4";
+        mcro_i3ws4: mcro_i3ws4 {
+            label = "ZM_mcro_i3ws4";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -78,8 +78,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_5: tdi3ws_5 {
-            label = "ZM_tdi3ws_5";
+        mcro_i3ws5: mcro_i3ws5 {
+            label = "ZM_mcro_i3ws5";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -88,8 +88,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_6: tdi3ws_6 {
-            label = "ZM_tdi3ws_6";
+        mcro_i3ws6: mcro_i3ws6 {
+            label = "ZM_mcro_i3ws6";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -98,8 +98,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_7: tdi3ws_7 {
-            label = "ZM_tdi3ws_7";
+        mcro_i3ws7: mcro_i3ws7 {
+            label = "ZM_mcro_i3ws7";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -108,8 +108,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_8: tdi3ws_8 {
-            label = "ZM_tdi3ws_8";
+        mcro_i3ws8: mcro_i3ws8 {
+            label = "ZM_mcro_i3ws8";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -118,8 +118,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-        tdi3ws_9: tdi3ws_9 {
-            label = "ZM_tdi3ws_9";
+        mcro_i3ws9: mcro_i3ws9 {
+            label = "ZM_mcro_i3ws9";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -137,7 +137,7 @@
   &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P    &kp LBKT
  &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI     &kp SQT
 &sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &sk RSHIFT
-                        &td_tdi3ws &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
+                        &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sk RALT      &mo 1
             >;
         };
 
@@ -151,10 +151,10 @@
         };
         i3_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &tdi3ws_7  &tdi3ws_8  &tdi3ws_9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &tdi3ws_4  &tdi3ws_5  &tdi3ws_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &trans  &tdi3ws_1  &tdi3ws_2  &tdi3ws_3  &trans  &trans
-                &trans    &trans   &tdi3ws_0          &none        &trans        &none
+&trans  &trans  &trans   &kp UP    &trans    &trans       &trans  &mcro_i3ws7  &mcro_i3ws8  &mcro_i3ws9  &trans  &trans
+&trans  &trans  &kp LEFT &kp DOWN  &kp RIGHT &trans       &trans  &mcro_i3ws4  &mcro_i3ws5  &mcro_i3ws6  &trans  &trans
+&trans  &trans  &trans   &trans    &trans    &trans       &trans  &mcro_i3ws1  &mcro_i3ws2  &mcro_i3ws3  &trans  &trans
+                     &trans    &trans   &mcro_i3ws0       &none        &trans        &none
             >;
         };
     };
