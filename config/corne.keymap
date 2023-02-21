@@ -27,148 +27,6 @@
             bindings = <&kp LGUI>, <&sl 2>;
         };
     };
-    macros {
-        mc_i3ws0: macro_i3_workspace_0 {
-            label = "ZM_macro_i3_workspace_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_0>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws1: macro_i3_workspace_1 {
-            label = "ZM_macro_i3_workspace_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_1>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws2: macro_i3_workspace_2 {
-            label = "ZM_macro_i3_workspace_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_2>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws3: macro_i3_workspace_3 {
-            label = "ZM_macro_i3_workspace_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_3>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws4: macro_i3_workspace_4 {
-            label = "ZM_macro_i3_workspace_4";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_4>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws5: macro_i3_workspace_5 {
-            label = "ZM_macro_i3_workspace_5";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_5>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws6: macro_i3_workspace_6 {
-            label = "ZM_macro_i3_workspace_6";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_6>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws7: macro_i3_workspace_7 {
-            label = "ZM_macro_i3_workspace_7";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_7>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws8: macro_i3_workspace_8 {
-            label = "ZM_macro_i3_workspace_8";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_8>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3ws9: macro_i3_workspace_9 {
-            label = "ZM_macro_i3_workspace_9";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp NUMBER_9>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3up: macro_i3_up {
-            label = "ZM_macro_i3_up";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp UP>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3down: macro_i3_down {
-            label = "ZM_macro_i3_down";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp DOWN>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3left: macro_i3_left {
-            label = "ZM_macro_i3_left";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_i3right: macro_i3_right {
-            label = "ZM_macro_i3_right";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -191,10 +49,10 @@
         };
         i3_layer {
             bindings = <
-&none      &none  &none      &mc_i3up    &none       &none       &none  &mc_i3ws7  &mc_i3ws8  &mc_i3ws9  &none  &none
-&none      &none  &mc_i3left &mc_i3down  &mc_i3right &none       &none  &mc_i3ws4  &mc_i3ws5  &mc_i3ws6  &none  &none
-&sk LSHFT  &none  &none      &none       &none       &none       &none  &mc_i3ws1  &mc_i3ws2  &mc_i3ws3  &none  &none
-                               &none  &sk LCTRL  &mc_i3ws0       &none    &trans     &sk RSHFT
+&none      &none  &none          &kp LGUI(UP)    &none           &none         &none  &kp LGUI(N7)  &kp LGUI(N8)  &kp LGUI(N9)  &none  &none
+&none      &none  &kp LGUI(LEFT) &kp LGUI(DOWN)  &kp LGUI(RIGHT) &none         &none  &kp LGUI(N4)  &kp LGUI(N5)  &kp LGUI(N6)  &none  &none
+&sk LSHFT  &none  &none          &none           &kp LGUI(ENTER) &none         &none  &kp LGUI(N1)  &kp LGUI(N2)  &kp LGUI(N3)  &none  &none
+                                        &none  &sk LCTRL  &kp LGUI(N0)         &none    &sk RALT     &sk RSHFT
             >;
         };
     };
