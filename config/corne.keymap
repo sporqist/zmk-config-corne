@@ -35,7 +35,7 @@
   &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp U      &kp I    &kp O     &kp P  &kp LBKT
  &sk CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp J      &kp K    &kp L  &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                            &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sl 2  &sk RSHIFT
+                            &td_i3 &sk LCTRL  &kp SPACE       &kp LC(BSPC)  &sl 2  &sk RALT
             >;
         };
 
@@ -62,7 +62,7 @@
   &kp ESC  &kp Q  &kp W     &kp E      &kp R      &kp T       &kp Y     &kp N7      &kp N8    &kp N9     &kp P  &kp LBKT
  &kp CAPS  &kp A  &kp S     &kp D      &kp F      &kp G       &kp H     &kp N4      &kp N5    &kp N6  &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp N     &kp N1      &kp N2    &kp N3  &kp FSLH  &tog 3
-                            &td_i3 &kp LCTRL  &kp SPACE       &kp LC(BSPC)  &sl 2  &kp RSHIFT
+                            &td_i3 &kp LCTRL  &kp SPACE       &kp LC(BSPC)  &sl 2  &kp RALT
             >;
         };
     };
