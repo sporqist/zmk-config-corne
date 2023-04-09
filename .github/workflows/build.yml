@@ -2,9 +2,6 @@ on: [push, pull_request, workflow_dispatch]
 
 name: Build
 
-env:
-  ACTIONS_RUNTIME_TOKEN: ${{ secrets.ACT_RUNNER_TOKEN }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
