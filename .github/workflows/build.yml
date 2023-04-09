@@ -2,6 +2,9 @@ on: [push, pull_request, workflow_dispatch]
 
 name: Build
 
+env:
+  ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
