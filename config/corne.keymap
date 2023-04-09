@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &sl {
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
 };
 
 &sk {
