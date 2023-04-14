@@ -61,7 +61,6 @@ jobs:
     #   with:
     #     name: firmware
     #     path: corne_right_nice_nano_v2.uf2
-    #       - name: Release
 
     # - name: Upload artifacts as release
     #   uses: https://github.com/softprops/action-gh-release@v1
