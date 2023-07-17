@@ -10,7 +10,7 @@ jobs:
     name: Build
     steps:
       - name: Install Dependencies
-        run: apt update; apt install -y nodejs ssh zip
+        run: apt-get update; apt-get install -y nodejs ssh zip
       - name: Setup Node
         uses: actions/setup-node@v3
       - name: Checkout
