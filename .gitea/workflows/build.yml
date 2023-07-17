@@ -73,3 +73,4 @@ jobs:
         with:
           name: firmware.zip
           path: firmware.zip
+          if-no-files-found: ignore
