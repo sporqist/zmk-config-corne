@@ -11,12 +11,15 @@ jobs:
     steps:
       - name: Install Dependencies
         run: apt-get update; apt-get install -y nodejs ssh zip
+
       - name: Setup Node
         uses: actions/setup-node@v3
+
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Cache west modules
-        uses: https://github.com/actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-zephyr-modules
         with:
@@ -31,29 +34,37 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
       - name: West Init
         run: west init -l config
+
       - name: West Update
         run: west update
+
       - name: West Zephyr export
         run: west zephyr-export
 
       - name: West Build (Corne Left)
         run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=corne_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
       - name: Corne Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_left_nice_nano_v2.uf2
 
       - name: West Build (Corne Right)
         run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=corne_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
       - name: Corne Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
 
       - name: Create Zip Archive
         run: zip firmware.zip corne_left_nice_nano_v2.uf2 corne_right_nice_nano_v2.uf2
+
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
