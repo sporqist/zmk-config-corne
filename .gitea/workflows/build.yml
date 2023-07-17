@@ -13,10 +13,12 @@ jobs:
     name: Build
     steps:
       - name: Install Dependencies
-        run: apt-get update; apt-get install -y nodejs ssh zip
+        run: |
+          apt-get update;
+          apt-get install --yes --no-install-recommends nodejs ssh zip
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+    # - name: Setup Node
+    #   uses: actions/setup-node@v3
 
       - name: Checkout
         uses: actions/checkout@v3
