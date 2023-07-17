@@ -17,28 +17,8 @@ jobs:
           apt-get update;
           apt-get install --yes --no-install-recommends nodejs ssh zip
 
-    # - name: Setup Node
-    #   uses: actions/setup-node@v3
-
       - name: Checkout
         uses: actions/checkout@v3
-
-    # - name: Cache west modules
-    #   uses: actions/cache@v3
-    #   env:
-    #     cache-name: cache-zephyr-modules
-    #   with:
-    #     path: |
-    #       modules/
-    #       tools/
-    #       zephyr/
-    #       bootloader/
-    #       zmk/
-    #     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
-    #     restore-keys: |
-    #       ${{ runner.os }}-build-${{ env.cache-name }}-
-    #       ${{ runner.os }}-build-
-    #       ${{ runner.os }}-
 
       - name: West Init
         run: west init -l config
@@ -67,12 +47,10 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
 
-      - name: Create Zip Archive
-        run: zip firmware.zip corne_left_nice_nano_v2.uf2 corne_right_nice_nano_v2.uf2
-
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: firmware.zip
-          path: firmware.zip
           if-no-files-found: ignore
+          path: |
+            *.uf2
