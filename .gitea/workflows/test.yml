@@ -13,6 +13,8 @@ jobs:
         run: |
           apt-get update;
           apt-get upgrade --yes
+          apt-get install --yes --no-install-recommends \
+            nodejs
 
       - name: Checkout
         uses: actions/checkout@v3
