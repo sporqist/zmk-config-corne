@@ -1,0 +1,29 @@
+on: [push, pull_request, workflow_dispatch]
+
+name: Test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-build-arm:stable
+    name: Build
+    steps:
+      - name: Install Dependencies
+        run: |
+          apt-get update;
+          apt-get install --yes --no-install-recommends \
+            nodejs \
+            ca-certificates
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create some File
+        run: echo "lalala" > test.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: test.txt
+          if-no-files-found: ignore
