@@ -15,7 +15,11 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update;
-          apt-get install --yes --no-install-recommends nodejs ssh zip
+          apt-get install --yes --no-install-recommends \
+            nodejs \
+            zip \
+            openssl \
+            ca-certificates
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -46,11 +50,12 @@ jobs:
 
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
+          
+      - name: Zip Artifacts
+        run: zip firmware.zip corne_left_nice_nano_v2.uf2 corne_right_nice_nano_v2.uf2
 
-      - name: Upload Artifacts
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: firmware.zip
+          path: firmware.zip
           if-no-files-found: ignore
-          path: |
-            *.uf2
