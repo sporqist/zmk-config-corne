@@ -2,9 +2,6 @@ on: [push, pull_request, workflow_dispatch]
 
 name: Build
 
-env:
-  ACTIONS_STEP_DEBUG: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
