@@ -12,9 +12,7 @@ jobs:
       - name: Install Dependencies
         run: |
           apt-get update;
-          apt-get install --yes --no-install-recommends \
-            nodejs \
-            ca-certificates
+          apt-get upgrade --yes
 
       - name: Checkout
         uses: actions/checkout@v3
