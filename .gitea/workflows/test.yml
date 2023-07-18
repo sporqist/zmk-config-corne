@@ -24,4 +24,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: test.txt
+          name: test.txt
           if-no-files-found: ignore
