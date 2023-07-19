@@ -41,13 +41,10 @@ jobs:
 
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
-          
-      - name: Zip Artifacts
-        run: zip firmware.zip corne_left_nice_nano_v2.uf2 corne_right_nice_nano_v2.uf2
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          path: firmware.zip
-          name: firmware.zip
+          path: |
+            *.uf2
           if-no-files-found: ignore
