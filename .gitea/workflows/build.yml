@@ -6,17 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:stable
+      image: ghcr.io/bcdevices/zephyr:latest
     name: Build
     steps:
       - name: Install Dependencies
         run: |
           apt-get update;
           apt-get install --yes --no-install-recommends \
-            nodejs \
-            zip \
-            openssl \
-            ca-certificates
+            nodejs
 
       - name: Checkout
         uses: actions/checkout@v3
