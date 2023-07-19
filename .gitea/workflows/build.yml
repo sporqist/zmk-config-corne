@@ -18,6 +18,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Hash west module
+        uses: https://gitea.com/actions/go-hashfiles@v0.0.1
+        id: hash-west
+        with: 
+          patterns: |-
+            app/west.yml
+
       - name: Cache west modules
         uses: actions/cache@v3
         env:
@@ -28,7 +35,7 @@ jobs:
             tools/
             zephyr/
             bootloader/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('app/west.yml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ steps.hash-west.outputs.hash }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
