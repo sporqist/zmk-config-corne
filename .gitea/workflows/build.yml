@@ -19,6 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Link Directories
+        run: |
+          ln -s /usr/src/zephyr-3.4.0/modules modules
+          ln -s /usr/src/zephyr-3.4.0/tools tools
+          ln -s /usr/src/zephyr-3.4.0/zephyr zephyr
+          ln -s /usr/src/zephyr-3.4.0/bootloader bootloader
+
       - name: Hash west module
         id: hash-west
         run: |
