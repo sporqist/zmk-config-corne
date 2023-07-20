@@ -24,6 +24,7 @@ jobs:
         run: |
           HASH=$(sha256sum config/west.yml)
           echo "hash=$HASH" >> "$GITHUB_OUTPUT"
+          echo "computed hash: $HASH"
 
       - name: Cache west modules
         uses: actions/cache@v3
