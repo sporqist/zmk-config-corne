@@ -14,17 +14,16 @@ jobs:
           apt-get update;
           apt-get install --yes --no-install-recommends \
             nodejs \
-            golang-go \
             zstd
 
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Hash west module
-        uses: https://gitea.com/actions/go-hashfiles@v0.0.1
         id: hash-west
-        with: 
-          patterns: '**west.yml'
+        run: |
+          HASH=$(sha256sum config/west.yml)
+          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
 
       - name: Cache west modules
         uses: actions/cache@v3
@@ -70,7 +69,7 @@ jobs:
 
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
-          
+
       - name: Zip Artifacts
         run: zip firmware.zip corne_left_nice_nano_v2.uf2 corne_right_nice_nano_v2.uf2
 
