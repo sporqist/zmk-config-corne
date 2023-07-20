@@ -79,3 +79,10 @@ jobs:
         with:
           path: firmware.zip
           name: firmware.zip
+
+      - name: Hash west module
+        id: hash-west
+        run: |
+          HASH=$(sha256sum zephyr/west.yml | head -c 64)
+          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
+          echo "computed hash: $HASH"
