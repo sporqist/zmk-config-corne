@@ -9,12 +9,6 @@ jobs:
       image: ghcr.io/bcdevices/zephyr:latest
     name: Build
     steps:
-      - name: look around
-        run: |
-          pwd
-          ls
-          ls /usr/src/zephyr-3.4.0/modules
-
       - name: Install Dependencies
         run: |
           apt-get update;
@@ -32,11 +26,6 @@ jobs:
           ln -s /usr/src/zephyr-3.4.0/tools tools
           ln -s /usr/src/zephyr-3.4.0/zephyr zephyr
           ln -s /usr/src/zephyr-3.4.0/bootloader bootloader
-
-      - name: look around
-        run: |
-          ls
-          ls modules
 
       - name: Hash west module
         id: hash-west
@@ -63,9 +52,6 @@ jobs:
             ${{ runner.os }}-
         timeout-minutes: 5
         continue-on-error: true
-
-      - name: West Init
-        run: west init -l config
 
       - name: West Update
         run: west update
