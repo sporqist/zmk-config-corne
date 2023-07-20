@@ -88,11 +88,3 @@ jobs:
         with:
           path: firmware.zip
           name: firmware.zip
-
-      - name: Hash west modules
-        id: hash-west
-        run: |
-          FILE_PATH=zephyr/west.yml
-          HASH=$(sha256sum <(find . -name build.yml -o -name west.yml -type f -exec sha256sum \; | sort) | head -c 64)
-          echo "hash=$HASH" >> "$GITHUB_OUTPUT"
-          echo "computed hash: $HASH"
