@@ -32,6 +32,11 @@ jobs:
           ln -s /usr/src/zephyr-3.4.0/zephyr zephyr
           ln -s /usr/src/zephyr-3.4.0/bootloader bootloader
 
+      - name: look around
+        run: |
+          ls
+          ls modules
+
       - name: Hash west module
         id: hash-west
         run: |
