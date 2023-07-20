@@ -29,9 +29,10 @@ jobs:
       - name: Hash west module
         id: hash-west
         run: |
-          HASH=$(sha256sum zephyr/west.yml | head -c 64)
+          FILE_PATH=zephyr/west.yml
+          HASH=$(sha256sum $FILE_PATH | head -c 64)
           echo "hash=$HASH" >> "$GITHUB_OUTPUT"
-          echo "computed hash: $HASH"
+          echo "computed hash: $HASH $FILE_PATH"
 
       - name: Cache west modules
         uses: actions/cache@v3
