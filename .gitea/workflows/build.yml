@@ -22,7 +22,7 @@ jobs:
       - name: Hash west module
         id: hash-west
         run: |
-          HASH=$(sha256sum config/west.yml)
+          HASH=$(sha256sum config/west.yml | head -c 64)
           echo "hash=$HASH" >> "$GITHUB_OUTPUT"
           echo "computed hash: $HASH"
 
