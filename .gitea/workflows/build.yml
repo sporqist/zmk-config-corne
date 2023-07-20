@@ -27,6 +27,7 @@ jobs:
 
       - name: Link Directories
         run: |
+          ln -s /usr/src/zephyr-3.4.0/.west .west
           ln -s /usr/src/zephyr-3.4.0/modules modules
           ln -s /usr/src/zephyr-3.4.0/tools tools
           ln -s /usr/src/zephyr-3.4.0/zephyr zephyr
