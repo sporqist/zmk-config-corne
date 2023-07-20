@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-        timeout-minutes: 15
+        timeout-minutes: 5
         continue-on-error: true
 
       - name: West Init
