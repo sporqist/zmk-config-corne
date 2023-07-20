@@ -54,6 +54,9 @@ jobs:
         timeout-minutes: 5
         continue-on-error: true
 
+      - name: Clone ZMK
+        run: git clone --depth 1 git@github.com:zmkfirmware/zmk.git
+
       - name: West Update
         run: west update
 
