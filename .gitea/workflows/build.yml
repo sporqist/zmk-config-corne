@@ -14,7 +14,8 @@ jobs:
           apt-get update;
           apt-get install --yes --no-install-recommends \
             nodejs \
-            golang-go
+            golang-go \
+            zstd
 
       - name: Checkout
         uses: actions/checkout@v3
