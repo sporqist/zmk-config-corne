@@ -44,11 +44,7 @@ jobs:
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_left_nice_nano_v2.uf2
-      - name: Archive (Corne Left)
-        uses: actions/upload-artifact@v4
-        with:
-          name: firmware
-          path: corne_left_nice_nano_v2.uf2
+
 
       - name: West Build (Corne Right)
         run: west build --pristine -s zmk/app -b nice_nano_v2 -- -DSHIELD=corne_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
@@ -56,11 +52,11 @@ jobs:
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 corne_right_nice_nano_v2.uf2
-      - name: Archive (Corne Right)
+      - name: Archive
         uses: actions/upload-artifact@v4
         with:
           name: firmware
-          path: corne_right_nice_nano_v2.uf2
+          path: '*.uf2'
 
       - name: Upload artifacts as release
         uses: softprops/action-gh-release@v1
